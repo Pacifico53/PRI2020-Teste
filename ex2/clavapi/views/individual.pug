@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-khaki
+      h3 Classe: #{title}
+    if classe.length > 0
+      .w3-container
+        table(class="w3-table-all")
+          tr
+            th ID
+            th CODIGO
+            th TITULO
+            th STATUS
+          each a in classe
+            tr
+              td=a.id
+              td= a.codigo
+              td= a.titulo
+              td= a.status
+    else
+      div(class="w3-container")
+        p Nao foi encontrada a classe...
+    div(class="w3-container w3-khaki")
+      p
+        a(href='/') Back to homepage.
+    footer(class="w3-container w3-khaki")
+      address Gerado por Bernardo Viseu :: 2021

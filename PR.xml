@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE projectRecord SYSTEM "PR.dtd">
+<projectRecord>
+    <title>Project Record</title>
+    <data>
+        <key_name>TESTE</key_name>
+        <title>Teste de Avaliação</title>
+        <subtitle>Project Record sobre o Teste de Avaliação</subtitle>
+        <begin_date>18/01/2021</begin_date>
+        <end_date>18/01/2021</end_date>
+        <supervisor href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </data>
+    <team>
+        <element>
+            <name>Bernardo Viseu</name>
+            <email>a74618@alunos.uminho.pt</email>
+        </element>
+    </team>
+    <abstract>
+        <paragraph>
+            <line>Para consertar a base de dados de casamento apliquei uma tool de formatação de JSON de maneira a consertar os erros maiores.</line>
+            <line>Depois disto consertei os erros restantes, e substitui os ref por _id, e as barras dos _ids por _ (utilziando search and replace.</line>
+            <line>Utilizei mongoimport -d casamentos -c casamentos --jsonArray casamentos.json para importar a base de dados para mongo</line>
+        </paragraph>
+    </abstract>
+    <deliverables>
+        <ref href="https://github.com/Pacifico53/PRI2020">Repositório de PRI</ref>
+    </deliverables>
+</projectRecord>
