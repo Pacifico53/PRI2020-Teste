@@ -47,7 +47,7 @@ router.get('/api/casamentos', function (req, res, next) {
               });
             })
             .catch(erro => res.status(500).jsonp({ "error": erro }))
-            console.log(casamentosEmAno);
+            // console.log(casamentosEmAno);
             element = {
               "ano": y,
               "casamentos": casamentosEmAno

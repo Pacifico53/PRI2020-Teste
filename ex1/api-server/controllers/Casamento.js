@@ -33,20 +33,3 @@ module.exports.getNoivos = () => {
         .exec()
 }
 
-module.exports.filtraTipoAno = (t, ano) => {
-    return Casamento
-        .find({ type: t, year: { $gt: ano } })
-        .exec()
-}
-
-module.exports.listaAutores = () => {
-    return Casamento
-        .aggregate([{ $unwind: "$authors" }, { $group: { _id: "$authors" } }, { $sort: { _id: 1 } }])
-        .exec()
-}
-
-module.exports.listaAutoresCasamento = a => {
-    return Casamento
-        .aggregate([{ $unwind: "$authors" }, { $match: { authors: a } }])
-        .exec()
-}
